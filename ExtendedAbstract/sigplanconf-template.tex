@@ -79,9 +79,33 @@
 %\keywords
 %keyword1, keyword2
 
-\section{Extended Abstract}
+\section*{Extended Abstract}
 
-Stuff with haskell packages!
+The hackage software repository hosts a whole lot of haskell software HACKAGEREFERENCE. This software is organized as cabal packages CABALREFERENCE. A cabal package serves a purpose. A cabal package groups functionality.
+
+A cabal package comes in different versions.
+
+A version defines several variants (depending on a configuration).
+
+Every variant together with all available package versions gives rise to several instances.
+
+An instance defines modules.
+
+A module contains declarations.
+
+A declaration defines symbols some of which are exported. The exported symbols are the interface of the module.
+
+Now what's new:
+
+Declarations differ across all three dimensions version, variant and instance because of stuff. But how much?
+
+BTW how come people assume that stuff can still be used if the interface is the same even though the implementation has changed?
+
+Do people adhere to PVP?
+
+Is the PVP annoying because it prevents stuff from being built that could be built? (cite BOS)
+
+
 
 %\appendix
 %\section{Appendix Title}
