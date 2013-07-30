@@ -83,15 +83,13 @@
 
 A big part of software written in Haskell is hosted on hackage HACKAGEREFERENCE. This software is organized and distributed as cabal packages CABALREFERENCE. The contribution of this paper is an analysis of a part of the packages on hackage regarding API evolution and API usage.
 
-Let's first explain how cabal works and then state interesting questions about existing packages.
+A package is identified by a package name for example "text". It groups related functionality for example for text processing. Given a repository of available package versions a package might have one or more versions.
 
-People upload package versions to hackage. A package version is uniquely identified by a package name and a version number CABALREFERENCE. It is a tarball containing mostly a desciption of the package and source code. Let's call the set of available package versions a repository. The following description of how cabal works is relative to a given repository.
+A package version is identified by a package and a version number for example "text-0.11.2.3". Version numbers are ordered and as a package evolves package versions with increasing version numbers are uploaded to hackage.
 
-A package is identified by a package name. It denotes the set of package versions in the repository with this package name.
+Depending on the platform and available non-haskell dependencies a single package version might need to have different variants.
 
-A package version can be configured in different ways, resulting in different variants.
-
-Every variant together with all available package versions gives rise to several instances.
+Every variant again given a repository of available package versions gives rise to several instances.
 
 An instance defines modules.
 
